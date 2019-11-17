@@ -13,13 +13,13 @@
 
 .inactive {
   font-weight: lighter;
-  fill: #c9c9c9;
+  fill: #000;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
 }
 
 .inactive:hover {
-  fill: #000;
+  fill: #6495ED;
   cursor: pointer;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .stateCircle {
-  fill: #89bdd3;
+  fill: #DC143C;
   stroke: #e3e3e3;
 }
 
