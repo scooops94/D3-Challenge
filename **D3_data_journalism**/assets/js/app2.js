@@ -95,7 +95,7 @@ function xScale(data, chosenXAxis) {
   function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
     if (chosenXAxis === "healthcare") {
-      var xlabel = "Health Care:";
+      var xlabel = "Lacks Healthcare:";
     }
     else if (chosenXAxis === "smokes"){
       var xlabel = "Smokers:"
@@ -116,7 +116,7 @@ function xScale(data, chosenXAxis) {
 
     var toolTip = d3.tip()
     .attr("class", "d3-tip")
-    .offset([-8, 0])
+    .offset([80, -60])
     .html(function(d) {
       return (`${d.state}<br>${xlabel} ${d[chosenXAxis]}<br> ${yLabel}${d[chosenYAxis]}`);
     });
@@ -198,7 +198,7 @@ data.forEach(function(data) {
     .attr("y", 20)
     .attr("value", "healthcare")
     .classed("active", true)
-    .text("% of People with Health Care");
+    .text("% of People who Lack Health Care");
 
     var smokersLabel = xlabelsGroup.append("text")
     .classed ("aText", true)
